@@ -1,6 +1,92 @@
-<% include head.ejs%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+    <link href="/assets/css/default.css" rel="stylesheet" type="text/css">
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <title>Twitteration</title>
+  </head>
+  <body>
+    <header class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-12">
+          <ul>
+            <img id="nav-logo" src="/assets/img/twitterment.png" /><li id="home-nav"><a href="#home">Twitteration</a></li>
+            <!-- <li id="features-nav"><a href="#features">Features</a></li>
+            <li id="about-nav"><a href="#about">About</a></li>
+            <li id="contact-nav"><a href="contact">Contact</a></li> -->
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <div id='root'></div>
-    <script src="/dist/bundle.js"></script>
+    <section id="App"> <!-- Attach React App -->
+    </section> <!-- END React App -->
 
-<% include foot.ejs%>
+    <section id="about" class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title">
+            <h3>True Real Time Tracking</h3>
+            <p>See how your brand sentiment is trending at this moment.</p>
+          </div>
+          <div class="features col-sm-12">
+            <div class="col-md-4 col-sm-12">
+              <div class="tile">
+                <h3>
+                  <div class="circle"><i class="fa fa-refresh fa-2x"></i></div>
+                  Real Time with Socket.io
+                </h3>
+                <p>
+                  Twitteration's server is built with NodeJS and Socket.io to provide real-time tracking. When new Tweets are received, Socket.io immediately sends the new data to your dashboard.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="tile">
+                <h3>
+                  <div class="circle"><i class="fa fa-exchange fa-2x"></i></div>
+                  Twitter Streaming API
+                </h3>
+                <p>
+                  Track specific keywords from Twitter's streaming API. Know exactly what's happening on Twitter, at this instant. Never miss a beat.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="tile">
+                <h3>
+                  <div class="circle"><i class="fa fa-bar-chart fa-2x"></i></div>
+                  Data Driven Documents: D3
+                </h3>
+                <p>
+                  Twitteration uses D3 to provide real-time graphical updates of how your brand is trending on Twitter for each new data point.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="baseline-container col-sm-12">
+          <div class="connect-container">
+            <p>Connect with the author:</p><a href="http://github.com/ahmadaladdasi">
+              <div class="github-logo"></div></a><a href="https://www.linkedin.com/in/ahmadaladdasi">
+              <div class="linkedin-logo"></div></a>
+          </div>
+          <div class="branding-container col-sm-12">
+            <p>Twitteration &copy; 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src='dist/bundle.js'></script>
+  </body>
+</html>
